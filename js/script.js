@@ -9,7 +9,7 @@
 const app = new Vue({
     el: "#app",
     data: {
-        emails: []
+        emails: [],
     },
     
     methods: {
@@ -30,7 +30,11 @@ const app = new Vue({
                         console.log(error);
                     });
                 };
-            console.log(this.emails);
+            if (this.emails.length < 10) {
+                console.log(this.emails);
+            } else {
+                console.log('Caricamento in corso');
+            }
         }
     }
 });

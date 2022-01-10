@@ -20,6 +20,9 @@
         <button @click="randomEmail">
             Clicca per creare 10 email casuali
         </button>
+        <div v-if="emails.length == 10">
+            {{ emails }}
+        </div>
     </div>
 
     <!-- JS -->
