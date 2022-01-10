@@ -20,8 +20,10 @@
         <button @click="randomEmail">
             Clicca per creare 10 email casuali
         </button>
-        <div v-if="emails.length == 10" v-for="(email, index) in emails">
-            {{ email }}
+        <div v-if="emails.length == 10">
+            <div v-for="(email, index) in emails">
+                {{ email }}
+            </div>
         </div>
     </div>
 
