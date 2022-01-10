@@ -11,10 +11,13 @@ const app = new Vue({
     data: {
         emails: []
     },
-
+    
     methods: {
+        
         randomEmail() {
+            this.emails.splice(0, this.emails.length);
             for (let i = 0; i < 10; i++) {
+
                 // Make a request for a user with a given ID
                 axios
                     .get('https://flynn.boolean.careers/exercises/api/random/mail')
