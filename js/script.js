@@ -12,6 +12,22 @@ const app = new Vue({
         
     },
 
+    created() {
+        
+        for (let i = 0; i < 10; i++) {
+            // Make a request for a user with a given ID
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then(function (response) {
+                    // handle success
+                    console.log(response.data.response);
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+        }
+    },
+
     methods: {
 
     }
